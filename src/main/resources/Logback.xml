@@ -1,0 +1,32 @@
+<configuration debug="false">
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%p] [%C{0}] %m%n"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder><pattern>${LOG_PATTERN}</pattern></encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/visual-test.log</file>
+        <append>false</append>
+        <encoder><pattern>${LOG_PATTERN}</pattern></encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <logger name="org.openqa.selenium"         level="WARN"/>
+    <logger name="org.openqa.selenium.devtools" level="OFF"/>
+    <logger name="org.openqa.selenium.chromium" level="OFF"/>
+    <logger name="io.github.bonigarcia"         level="WARN"/>
+    <logger name="ru.yandex.qatools.ashot"      level="WARN"/>
+
+</configuration>

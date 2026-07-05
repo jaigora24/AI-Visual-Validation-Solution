@@ -1,0 +1,37 @@
+2026-07-06 00:42:26.090 [INFO] [ActualCapture] ════════════════════════════════════════════════════════════
+2026-07-06 00:42:26.097 [INFO] [ActualCapture] ACTUAL CAPTURE started — 2 script(s) to run
+2026-07-06 00:42:26.103 [INFO] [ActualCapture] ════════════════════════════════════════════════════════════
+2026-07-06 00:42:26.105 [INFO] [ActualCapture] Starting script: demo-shop-login ...
+2026-07-06 00:42:27.087 [INFO] [BaselineCapture] Starting Chrome (headless=true)
+2026-07-06 00:42:40.641 [INFO] [ActualCapture] [actual] Saved → actuals/demo-shop-login_20260706_004239_actual.png
+2026-07-06 00:42:42.820 [INFO] [ImageDiffChecker]   ┌─ Diff: demo-shop-login
+2026-07-06 00:42:42.822 [INFO] [ImageDiffChecker]   │  Changed  : 664567 / 2298578 px  (28.91 %)
+2026-07-06 00:42:42.823 [INFO] [ImageDiffChecker]   │  Regions  : 5 bounding box(es) drawn
+2026-07-06 00:42:42.823 [INFO] [ImageDiffChecker]   │  Threshold: 2.0 %
+2026-07-06 00:42:42.824 [INFO] [ImageDiffChecker]   │  Diff img : diffs/demo-shop-login_20260706_004240_diff.png
+2026-07-06 00:42:42.825 [WARN] [ImageDiffChecker]   │  Result   : FAIL — diff 28.91 % >= threshold 2.0 %
+2026-07-06 00:42:42.825 [INFO] [ImageDiffChecker]   └─ Triggering AI agent for analysis...
+2026-07-06 00:42:43.377 [INFO] [AiAnalyser]   Calling AI (gemini / gemini-2.5-flash)...
+2026-07-06 00:42:56.710 [INFO] [AiAnalyser]   ┌─ AI Analysis (gemini / gemini-2.5-flash) ──────────────────────────────
+2026-07-06 00:42:56.712 [INFO] [AiAnalyser]   │  Severity       : 🔴 CRITICAL
+2026-07-06 00:42:56.713 [INFO] [AiAnalyser]   │  Category       : layout shift
+2026-07-06 00:42:56.714 [INFO] [AiAnalyser]   │  Finding        : The actual screenshot displays the login page for the specified URL, but the baseline screenshot shows the website's homepage. This results in the complete replacement of all homepage content, including the ad banner and featured products, with the login form and its associated elements.
+2026-07-06 00:42:56.718 [INFO] [AiAnalyser]   │  Recommendation : The baseline screenshot is incorrect for the tested URL `https://demowebshop.tricentis.com/login`. It should be updated to a screenshot of the expected login page to ensure valid visual regression testing for this particular test case.
+2026-07-06 00:42:56.719 [INFO] [AiAnalyser]   └────────────────────────────────────────────────────────
+2026-07-06 00:42:57.197 [INFO] [ActualCapture] Browser closed: demo-shop-login
+2026-07-06 00:42:57.197 [INFO] [ActualCapture] Starting script: demo-shop-homepage ...
+2026-07-06 00:42:57.228 [INFO] [BaselineCapture] Starting Chrome (headless=true)
+2026-07-06 00:43:28.466 [INFO] [ActualCapture] [actual] Saved → actuals/demo-shop-homepage_20260706_004327_actual.png
+2026-07-06 00:43:29.747 [INFO] [ImageDiffChecker]   ┌─ Diff: demo-shop-homepage
+2026-07-06 00:43:29.748 [INFO] [ImageDiffChecker]   │  Changed  : 0 / 2298578 px  (0.00 %)
+2026-07-06 00:43:29.748 [INFO] [ImageDiffChecker]   │  Regions  : 0 bounding box(es) drawn
+2026-07-06 00:43:29.749 [INFO] [ImageDiffChecker]   │  Threshold: 2.0 %
+2026-07-06 00:43:29.750 [INFO] [ImageDiffChecker]   │  Diff img : diffs/demo-shop-homepage_20260706_004328_diff.png
+2026-07-06 00:43:29.750 [INFO] [ImageDiffChecker]   │  Result   : PASS
+2026-07-06 00:43:29.751 [INFO] [ImageDiffChecker]   └─ AI skipped — diff below threshold, SKIP AI analysis
+2026-07-06 00:43:30.266 [INFO] [ActualCapture] Browser closed: demo-shop-homepage
+2026-07-06 00:43:30.969 [INFO] [HtmlReportGenerator]   📄 HTML Report → reports/visual-report_20260706_004330.html
+2026-07-06 00:43:30.970 [INFO] [HtmlReportGenerator]      Open in any browser — images embedded, fully portable.
+2026-07-06 00:43:30.970 [INFO] [ActualCapture] ════════════════════════════════════════════════════════════
+2026-07-06 00:43:30.970 [INFO] [ActualCapture] ACTUAL CAPTURE complete
+2026-07-06 00:43:30.970 [INFO] [ActualCapture] ════════════════════════════════════════════════════════════
